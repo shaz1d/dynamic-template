@@ -1,69 +1,96 @@
 const form = document.getElementById("content-form");
 
-const heading = document.getElementById("heading");
-const subHeading = document.getElementById("subHeading");
-const actionBtn = document.getElementById("actionBtn");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const company = document.getElementById("company");
+const heading = document.querySelectorAll(".heading");
+const subHeading = document.querySelectorAll(".subHeading");
+const actionBtn = document.querySelectorAll(".actionBtn");
+const email = document.querySelectorAll(".email");
+const phone = document.querySelectorAll(".phone");
+const company = document.querySelectorAll(".company");
 
-const logo = document.getElementById("logo");
-const templateImg = document.getElementById("templateImg");
+const logo = document.querySelectorAll(".logo");
+const templateImg = document.querySelectorAll(".templateImg");
 
-const priColors = document.querySelectorAll(".pri-color");
-const secColors = document.querySelectorAll(".sec-color");
+const priText = document.querySelectorAll(".priText");
+const priBg = document.querySelectorAll(".priBg");
+const secText = document.querySelectorAll(".secText");
+const secBg = document.querySelectorAll(".secBg");
 
-form.addEventListener("submit", (e) => e.preventDefault());
-form.addEventListener("keyup", (e) => {
-  e.preventDefault();
+function changeContent() {
   const formData = new FormData(form);
-  heading.textContent = formData.get("heading")
-    ? formData.get("heading")
-    : "The quick brown fox jumps over lazy dogs.";
-  subHeading.textContent = formData.get("subheading")
-    ? formData.get("subheading")
-    : "The majestic mountains stood tall against the azure sky, a breathtaking sight. ";
-  actionBtn.textContent = formData.get("actionBtn")
-    ? formData.get("actionBtn")
-    : "The cat meowed";
 
-  email.textContent = formData.get("email")
-    ? formData.get("email")
-    : "info@gmail.com";
-  phone.textContent = formData.get("phone")
-    ? formData.get("phone")
-    : "+432 4432242";
-  company.textContent = formData.get("company")
-    ? formData.get("company")
-    : "The A Team";
+  heading.forEach((item) => {
+    item.textContent = formData.get("heading")
+      ? formData.get("heading")
+      : "The quick brown fox jumps over lazy dogs.";
+  });
+  subHeading.forEach((item) => {
+    item.textContent = formData.get("subheading")
+      ? formData.get("subheading")
+      : "The majestic mountains stood tall against the azure sky, a breathtaking sight. ";
+  });
+  actionBtn.forEach((item) => {
+    item.textContent = formData.get("actionBtn")
+      ? formData.get("actionBtn")
+      : "The cat meowed";
+  });
 
-  priColors.forEach((item) => {
+  email.forEach((item) => {
+    item.textContent = formData.get("email")
+      ? formData.get("email")
+      : "info@gmail.com";
+  });
+  phone.forEach((item) => {
+    item.textContent = formData.get("phone")
+      ? formData.get("phone")
+      : "+432 4432242";
+  });
+  company.forEach((item) => {
+    item.textContent = formData.get("company")
+      ? formData.get("company")
+      : "The A Team";
+  });
+
+  priBg.forEach((item) => {
     item.style.backgroundColor = formData.get("primaryColor")
       ? formData.get("primaryColor")
       : "#000000";
   });
-  secColors.forEach((item) => {
+  secText.forEach((item) => {
     item.style.color = formData.get("secondaryColor")
       ? formData.get("secondaryColor")
       : "red";
   });
-
-  if (formData.get("logo")) {
+  secBg.forEach((item) => {
+    item.style.backgroundColor = formData.get("secondaryColor")
+      ? formData.get("secondaryColor")
+      : "red";
+  });
+  if (formData.get("logo").size !== 0) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      logo.src = e.target.result;
+      logo.forEach((item) => {
+        item.src = e.target.result;
+      });
     };
     reader.readAsDataURL(formData.get("logo"));
-  } else {
-    logo.src = "https://cdn-icons-png.flaticon.com/512/5332/5332306.png";
   }
-  if (formData.get("templateImg")) {
+  if (formData.get("templateImg").size !== 0) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      templateImg.src = e.target.result;
+      templateImg.forEach((item) => {
+        item.src = e.target.result;
+      });
     };
     reader.readAsDataURL(formData.get("templateImg"));
-  } else {
-    templateImg.src = "https://cdn-icons-png.flaticon.com/512/5332/5332306.png";
   }
+}
+
+form.addEventListener("submit", (e) => e.preventDefault());
+form.addEventListener("keyup", (e) => {
+  e.preventDefault();
+  changeContent();
+});
+form.addEventListener("change", (e) => {
+  e.preventDefault();
+  changeContent();
 });

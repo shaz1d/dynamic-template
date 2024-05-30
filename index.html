@@ -14,7 +14,7 @@
     <section class="my-20">
       <form
         id="content-form"
-        class="max-w-xl mx-auto w-full flex flex-col gap-2 p-8 shadow-2xl rounded-xl"
+        class="max-w-xl mx-auto w-full grid sm:grid-cols-2 gap-x-5 gap-y-2 p-8 shadow-2xl rounded-xl"
       >
         <label for="headingInput" class="text-sm font-semibold"
           >Heading
@@ -37,13 +37,13 @@
             type="text"
             name="subheading"
             id="subheadingInput"
-            maxlength="50"
+            maxlength="60"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Subheading"
           />
           <span
             class="block mt-[2px] text-xs text-slate-600 font-normal text-right"
-            >Max 50 character</span
+            >Max 60 character</span
           >
         </label>
         <label for="actionBtnInput" class="text-sm font-semibold">
@@ -119,6 +119,7 @@
           <input
             type="color"
             name="primaryColor"
+            value="#172554"
             id="primaryColorInput"
             class="font-normal text-base rounded-md mt-1"
           />
@@ -130,6 +131,7 @@
           Secondary Color
           <input
             type="color"
+            value="#ca8a04"
             name="secondaryColor"
             id="secondaryColorInput"
             class="font-normal text-base rounded-md mt-1"
@@ -138,39 +140,39 @@
         <input
           type="submit"
           value="Generate"
-          class="bg-orange-500 text-xl cursor-pointer text-white rounded-md py-2 px-4 font-semibold"
+          class="col-span-2 bg-orange-500 text-xl cursor-pointer text-white rounded-md py-2 px-4 font-semibold"
         />
       </form>
     </section>
     <section class="my-20">
       <div
-        id="contentBg"
-        class="aspect-square bg-blue-950 pri-color text-white p-5 max-w-2xl mx-auto"
+        class="aspect-square bg-blue-950 priBg text-white p-5 max-w-2xl mx-auto"
       >
-        <div class="grid grid-cols-2 h-full items-center">
+        <div class="grid grid-cols-2 gap-2 h-full items-center">
           <div>
             <div class="flex items-center gap-2">
               <img
-                class="w-10"
-                id="logo"
+                class="w-10 logo"
                 src="https://cdn-icons-png.flaticon.com/512/5332/5332306.png"
                 alt=""
               />
 
-              <p id="company">demo logo</p>
+              <p class="company font-medium capitalize">demo logo</p>
             </div>
             <h1
-              id="heading"
-              class="text-3xl font-bold mt-8 mb-4 text-orange-500 sec-color"
+              class="heading text-3xl font-bold mt-8 mb-4 text-orange-500 secText"
             >
               The quick brown fox jumps over lazy dogs.
             </h1>
-            <h2 id="subHeading" class="text-xl font-semibold mb-10">
+            <h2
+              id="subHeading"
+              class="subHeading text-xl font-semibold mb-10 italic"
+            >
               The majestic mountains stood tall against the azure sky, a
               breathtaking sight.
             </h2>
             <a
-              class="inline-flex items-center gap-1 pl-1 pr-5 py-1 bg-orange-500 sec-color rounded-full text-white text-lg font-semibold capitalize keep-all"
+              class="inline-flex items-center gap-1 pl-1 pr-5 py-1 bg-orange-500 secBg rounded-full text-white text-lg font-semibold capitalize keep-all"
               href=""
             >
               <div
@@ -178,32 +180,32 @@
               >
                 <i class="bx bx-play"></i>
               </div>
-              <span id="actionBtn">The cat meowed</span></a
+              <span class="actionBtn">The cat meowed</span></a
             >
 
             <div class="mt-10">
               <p class="text-sm">Contact Us to find out more.</p>
               <div class="flex gap-2 items-center mb-2 mt-2 text-xl">
                 <div
-                  class="rounded-full text-lg bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
+                  class="rounded-full text-lg bg-white h-8 w-8 secText flex items-center justify-center text-orange-500"
                 >
                   <i class="bx bxs-phone"></i>
                 </div>
-                <a href="tel:" id="phone">+432 4432242</a>
+                <a href="tel:" class="phone">+432 4432242</a>
               </div>
               <div class="flex gap-2 items-center text-xl">
                 <div
-                  class="rounded-full text-lg bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
+                  class="rounded-full text-lg bg-white h-8 w-8 secText flex items-center justify-center text-orange-500"
                 >
                   <i class="bx bxs-envelope"></i>
                 </div>
-                <a mailto="" id="email">info@gmail.com</a>
+                <a mailto="" class="email">info@gmail.com</a>
               </div>
             </div>
           </div>
           <div>
             <img
-              id="templateImg"
+              class="templateImg"
               src="https://www.pngitem.com/pimgs/m/332-3327917_hero-img-web-frame-mockup-free-hd-png.png"
               alt=""
             />
@@ -211,7 +213,67 @@
         </div>
       </div>
     </section>
+    <section class="my-20">
+      <div
+        class="aspect-square bg-slate-950 priBg text-white p-5 max-w-2xl mx-auto"
+      >
+        <div class="grid grid-cols-2 h-full items-center">
+          <div>
+            <div class="flex items-center gap-2">
+              <img
+                class="w-10 logo"
+                src="https://cdn-icons-png.flaticon.com/512/5332/5332306.png"
+                alt=""
+              />
 
+              <p class="company font-medium capitalize">demo logo</p>
+            </div>
+            <h1
+              class="heading text-3xl font-bold mt-8 mb-4 text-orange-500 secText uppercase"
+            >
+              The quick brown fox jumps over lazy dogs.
+            </h1>
+            <h2 id="subHeading" class="subHeading text-base font-normal mb-10">
+              The majestic mountains stood tall against the azure sky, a
+              breathtaking sight.
+            </h2>
+            <a
+              class="inline-block px-5 py-2 rounded-md bg-gradient-to-r from-orange-500 to-slate-950 secBg text-white text-lg font-semibold capitalize keep-all"
+              href=""
+            >
+              <span class="actionBtn">The cat meowed</span></a
+            >
+
+            <div class="mt-10">
+              <p class="text-sm">Contact Us to find out more.</p>
+              <div class="flex gap-2 items-center mb-2 mt-2 text-xl">
+                <div
+                  class="rounded-full text-lg bg-white h-8 w-8 secText flex items-center justify-center text-orange-500"
+                >
+                  <i class="bx bxs-phone"></i>
+                </div>
+                <a href="tel:" class="phone">+432 4432242</a>
+              </div>
+              <div class="flex gap-2 items-center text-xl">
+                <div
+                  class="rounded-full text-lg bg-white h-8 w-8 secText flex items-center justify-center text-orange-500"
+                >
+                  <i class="bx bxs-envelope"></i>
+                </div>
+                <a mailto="" class="email">info@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              class="templateImg"
+              src="https://www.pngitem.com/pimgs/m/332-3327917_hero-img-web-frame-mockup-free-hd-png.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>
