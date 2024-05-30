@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
@@ -17,27 +21,42 @@
           <input
             type="text"
             id="headingInput"
+            maxlength="40"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Heading"
           />
+          <span
+            class="block mt-[2px] text-xs text-slate-600 font-normal text-right"
+            >Max 40 character</span
+          >
         </label>
         <label for="subheadingInput" class="text-sm font-semibold">
           Sub Heading
           <input
             type="text"
             id="subheadingInput"
+            maxlength="50"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Subheading"
           />
+          <span
+            class="block mt-[2px] text-xs text-slate-600 font-normal text-right"
+            >Max 50 character</span
+          >
         </label>
         <label for="actionBtnInput" class="text-sm font-semibold">
           ActionBtn
           <input
             type="text"
             id="actionBtnInput"
+            maxlength="15"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Action Button"
           />
+          <span
+            class="block mt-[2px] text-xs text-slate-600 font-normal text-right"
+            >Max 15 character</span
+          >
         </label>
         <label for="emailInput" class="text-sm font-semibold">
           Email
@@ -108,13 +127,16 @@
         </label>
         <input
           type="submit"
-          value="Submit"
-          class="bg-orange-500 text-white rounded-md py-2 px-4 font-semibold"
+          value="Generate"
+          class="bg-orange-500 text-xl text-white rounded-md py-2 px-4 font-semibold"
         />
       </form>
     </section>
     <section class="my-20">
-      <div class="aspect-square bg-blue-800 text-white p-5 max-w-2xl mx-auto">
+      <div
+        id="contentBg"
+        class="aspect-square bg-blue-950 text-white p-5 max-w-2xl mx-auto"
+      >
         <div class="grid grid-cols-2 h-full items-center">
           <div>
             <div class="flex items-center gap-2">
@@ -127,7 +149,10 @@
 
               <p id="company">demo logo</p>
             </div>
-            <h1 id="heading" class="text-3xl font-bold mt-8 mb-4">
+            <h1
+              id="heading"
+              class="text-3xl font-bold mt-8 mb-4 text-orange-500"
+            >
               The quick brown fox jumps over lazy dogs.
             </h1>
             <h2 id="subheading" class="text-xl font-semibold mb-10">
@@ -139,41 +164,43 @@
               class="inline-flex items-center gap-1 pl-1 pr-5 py-1 bg-orange-500 rounded-full text-white text-lg"
               href=""
             >
-              <svg
-                class="w-10 h-10 bg-white rounded-full"
-                fill="#000000"
-                width="800px"
-                height="800px"
-                viewBox="0 0 408.221 408.221"
-                xml:space="preserve"
+              <div
+                class="rounded-full w-10 h-10 flex items-center justify-center bg-black text-white text-2xl"
               >
-                <g>
-                  <g>
-                    <path
-                      d="M204.11,0C91.388,0,0,91.388,0,204.111c0,112.725,91.388,204.11,204.11,204.11c112.729,0,204.11-91.385,204.11-204.11
-                       C408.221,91.388,316.839,0,204.11,0z M286.547,229.971l-126.368,72.471c-17.003,9.75-30.781,1.763-30.781-17.834V140.012
-                       c0-19.602,13.777-27.575,30.781-17.827l126.368,72.466C303.551,204.403,303.551,220.217,286.547,229.971z"
-                    />
-                  </g>
-                </g>
-              </svg>
-              <span>The cat meowed.</span></a
+                <i class="bx bx-play"></i>
+              </div>
+              <span>The cat meowed</span></a
             >
+
+            <div class="mt-10">
+              <p class="text-sm">Contact Us to find out more.</p>
+              <div class="flex gap-2 items-center mb-2 mt-2 text-xl">
+                <div
+                  class="rounded-full text-2xl bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
+                >
+                  <i class="bx bxs-phone"></i>
+                </div>
+                <a tel="" id="phone">+432 4432242</a>
+              </div>
+              <div class="flex gap-2 items-center text-xl">
+                <div
+                  class="rounded-full text-2xl bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
+                >
+                  <i class="bx bxs-envelope"></i>
+                </div>
+                <a mailto="" id="email">info@gmail.com</a>
+              </div>
+            </div>
           </div>
           <div>
             <img
+              id="templateImg"
               src="https://www.pngitem.com/pimgs/m/332-3327917_hero-img-web-frame-mockup-free-hd-png.png"
               alt=""
             />
           </div>
         </div>
       </div>
-
-      <p id="email"></p>
-      <p id="phone"></p>
-      <img id="templateImg" src="" alt="" />
-      <div id="primaryColor" style="width: 50px; height: 50px"></div>
-      <div id="secondaryColor" style="width: 50px; height: 50px"></div>
     </section>
 
     <script src="main.js"></script>
