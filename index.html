@@ -21,6 +21,7 @@
           <input
             type="text"
             id="headingInput"
+            name="heading"
             maxlength="40"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Heading"
@@ -34,6 +35,7 @@
           Sub Heading
           <input
             type="text"
+            name="subheading"
             id="subheadingInput"
             maxlength="50"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
@@ -49,6 +51,7 @@
           <input
             type="text"
             id="actionBtnInput"
+            name="actionBtn"
             maxlength="15"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Action Button"
@@ -63,6 +66,7 @@
           <input
             type="email"
             id="emailInput"
+            name="email"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Email"
           />
@@ -72,6 +76,7 @@
           <input
             type="tel"
             id="phoneInput"
+            name="phone"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Phone Number"
           />
@@ -81,6 +86,7 @@
           <input
             type="text"
             id="companyInput"
+            name="company"
             class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
             placeholder="Company Name"
           />
@@ -90,6 +96,7 @@
           <input
             type="file"
             id="logoInput"
+            name="logo"
             class="py-2 w-full font-normal text-base rounded-md mt-1"
             name="logo-input"
           />
@@ -98,6 +105,7 @@
           Template Image
           <input
             type="file"
+            name="templateImg"
             id="templateImgInput"
             class="py-2 w-full font-normal text-base rounded-md mt-1"
             name="template-img-input"
@@ -110,6 +118,7 @@
           Primary Color
           <input
             type="color"
+            name="primaryColor"
             id="primaryColorInput"
             class="font-normal text-base rounded-md mt-1"
           />
@@ -121,6 +130,7 @@
           Secondary Color
           <input
             type="color"
+            name="secondaryColor"
             id="secondaryColorInput"
             class="font-normal text-base rounded-md mt-1"
           />
@@ -128,7 +138,7 @@
         <input
           type="submit"
           value="Generate"
-          class="bg-orange-500 text-xl text-white rounded-md py-2 px-4 font-semibold"
+          class="bg-orange-500 text-xl cursor-pointer text-white rounded-md py-2 px-4 font-semibold"
         />
       </form>
     </section>
@@ -155,13 +165,12 @@
             >
               The quick brown fox jumps over lazy dogs.
             </h1>
-            <h2 id="subheading" class="text-xl font-semibold mb-10">
+            <h2 id="subHeading" class="text-xl font-semibold mb-10">
               The majestic mountains stood tall against the azure sky, a
               breathtaking sight.
             </h2>
             <a
-              id="actionBtn"
-              class="inline-flex items-center gap-1 pl-1 pr-5 py-1 bg-orange-500 rounded-full text-white text-lg"
+              class="inline-flex items-center gap-1 pl-1 pr-5 py-1 bg-orange-500 rounded-full text-white text-lg font-semibold capitalize keep-all"
               href=""
             >
               <div
@@ -169,14 +178,14 @@
               >
                 <i class="bx bx-play"></i>
               </div>
-              <span>The cat meowed</span></a
+              <span id="actionBtn">The cat meowed</span></a
             >
 
             <div class="mt-10">
               <p class="text-sm">Contact Us to find out more.</p>
               <div class="flex gap-2 items-center mb-2 mt-2 text-xl">
                 <div
-                  class="rounded-full text-2xl bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
+                  class="rounded-full text-lg bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
                 >
                   <i class="bx bxs-phone"></i>
                 </div>
@@ -184,7 +193,7 @@
               </div>
               <div class="flex gap-2 items-center text-xl">
                 <div
-                  class="rounded-full text-2xl bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
+                  class="rounded-full text-lg bg-white h-8 w-8 text-black flex items-center justify-center text-orange-500"
                 >
                   <i class="bx bxs-envelope"></i>
                 </div>
