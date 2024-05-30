@@ -7,6 +7,175 @@
     <title>Document</title>
   </head>
   <body>
+    <section class="my-20">
+      <form
+        id="content-form"
+        class="max-w-xl mx-auto w-full flex flex-col gap-2 p-8 shadow-2xl rounded-xl"
+      >
+        <label for="headingInput" class="text-sm font-semibold"
+          >Heading
+          <input
+            type="text"
+            id="headingInput"
+            class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
+            placeholder="Heading"
+          />
+        </label>
+        <label for="subheadingInput" class="text-sm font-semibold">
+          Sub Heading
+          <input
+            type="text"
+            id="subheadingInput"
+            class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
+            placeholder="Subheading"
+          />
+        </label>
+        <label for="actionBtnInput" class="text-sm font-semibold">
+          ActionBtn
+          <input
+            type="text"
+            id="actionBtnInput"
+            class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
+            placeholder="Action Button"
+          />
+        </label>
+        <label for="emailInput" class="text-sm font-semibold">
+          Email
+          <input
+            type="email"
+            id="emailInput"
+            class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
+            placeholder="Email"
+          />
+        </label>
+        <label for="phoneInput" class="text-sm font-semibold">
+          Phone Number
+          <input
+            type="tel"
+            id="phoneInput"
+            class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
+            placeholder="Phone Number"
+          />
+        </label>
+        <label for="companyInput" class="text-sm font-semibold">
+          Company
+          <input
+            type="text"
+            id="companyInput"
+            class="border border-slate-200 py-2 px-4 w-full font-normal text-base rounded-md mt-1"
+            placeholder="Company Name"
+          />
+        </label>
+        <label for="logoInput" class="text-sm font-semibold">
+          Logo
+          <input
+            type="file"
+            id="logoInput"
+            class="py-2 w-full font-normal text-base rounded-md mt-1"
+            name="logo-input"
+          />
+        </label>
+        <label for="templateImgInput" class="text-sm font-semibold">
+          Template Image
+          <input
+            type="file"
+            id="templateImgInput"
+            class="py-2 w-full font-normal text-base rounded-md mt-1"
+            name="template-img-input"
+          />
+        </label>
+        <label
+          for="primaryColorInput"
+          class="text-sm font-semibold flex items-center gap-2 my-2"
+        >
+          Primary Color
+          <input
+            type="color"
+            id="primaryColorInput"
+            class="font-normal text-base rounded-md mt-1"
+          />
+        </label>
+        <label
+          for="secondaryColorInput"
+          class="text-sm font-semibold flex items-center gap-2 my-2"
+        >
+          Secondary Color
+          <input
+            type="color"
+            id="secondaryColorInput"
+            class="font-normal text-base rounded-md mt-1"
+          />
+        </label>
+        <input
+          type="submit"
+          value="Submit"
+          class="bg-orange-500 text-white rounded-md py-2 px-4 font-semibold"
+        />
+      </form>
+    </section>
+    <section class="my-20">
+      <div class="aspect-square bg-slate-300 p-5 max-w-2xl mx-auto">
+        <div class="grid grid-cols-2 h-full items-center">
+          <div>
+            <div class="flex items-center gap-2">
+              <img
+                class="w-10"
+                id="logo"
+                src="https://cdn-icons-png.flaticon.com/512/5332/5332306.png"
+                alt=""
+              />
+
+              <p id="company">demo logo</p>
+            </div>
+            <h1 id="heading" class="text-3xl font-bold mt-8 mb-4">
+              The quick brown fox jumps over lazy dogs.
+            </h1>
+            <h2 id="subheading" class="text-xl font-semibold mb-10">
+              The majestic mountains stood tall against the azure sky, a
+              breathtaking sight.
+            </h2>
+            <a
+              id="actionBtn"
+              class="inline-flex items-center gap-1 pl-1 pr-5 py-1 bg-orange-500 rounded-full text-white text-lg"
+              href=""
+            >
+              <svg
+                class="w-10 h-10 bg-white rounded-full"
+                fill="#000000"
+                width="800px"
+                height="800px"
+                viewBox="0 0 408.221 408.221"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M204.11,0C91.388,0,0,91.388,0,204.111c0,112.725,91.388,204.11,204.11,204.11c112.729,0,204.11-91.385,204.11-204.11
+                       C408.221,91.388,316.839,0,204.11,0z M286.547,229.971l-126.368,72.471c-17.003,9.75-30.781,1.763-30.781-17.834V140.012
+                       c0-19.602,13.777-27.575,30.781-17.827l126.368,72.466C303.551,204.403,303.551,220.217,286.547,229.971z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <span>The cat meowed.</span></a
+            >
+          </div>
+          <div>
+            <img
+              src="https://www.pngitem.com/pimgs/m/332-3327917_hero-img-web-frame-mockup-free-hd-png.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <p id="email"></p>
+      <p id="phone"></p>
+      <img id="templateImg" src="" alt="" />
+      <div id="primaryColor" style="width: 50px; height: 50px"></div>
+      <div id="secondaryColor" style="width: 50px; height: 50px"></div>
+    </section>
+
     <script src="main.js"></script>
   </body>
 </html>
