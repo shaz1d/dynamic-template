@@ -10,6 +10,10 @@ const company = document.getElementById("company");
 const logo = document.getElementById("logo");
 const templateImg = document.getElementById("templateImg");
 
+const priColors = document.querySelectorAll(".pri-color");
+const secColors = document.querySelectorAll(".sec-color");
+
+form.addEventListener("submit", (e) => e.preventDefault());
 form.addEventListener("keyup", (e) => {
   e.preventDefault();
   const formData = new FormData(form);
@@ -33,6 +37,17 @@ form.addEventListener("keyup", (e) => {
     ? formData.get("company")
     : "The A Team";
 
+  priColors.forEach((item) => {
+    item.style.backgroundColor = formData.get("primaryColor")
+      ? formData.get("primaryColor")
+      : "#000000";
+  });
+  secColors.forEach((item) => {
+    item.style.color = formData.get("secondaryColor")
+      ? formData.get("secondaryColor")
+      : "red";
+  });
+
   if (formData.get("logo")) {
     const reader = new FileReader();
     reader.onload = function (e) {
@@ -52,5 +67,3 @@ form.addEventListener("keyup", (e) => {
     templateImg.src = "https://cdn-icons-png.flaticon.com/512/5332/5332306.png";
   }
 });
-
-form.addEventListener("submit", (e) => e.preventDefault());
